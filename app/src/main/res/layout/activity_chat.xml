@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/very_light_gray"
+    tools:context="com.eternallect.pushersample.ChatActivity">
+
+    <ListView
+        android:id="@+id/lv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:transcriptMode="alwaysScroll"
+        android:background="@null"
+        android:divider="@null"
+        android:stackFromBottom="true"
+        >
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/llMsgCompose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+         >
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/text_msg_input"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:onClick="onSend"
+            />
+
+    </LinearLayout>
+</LinearLayout>
